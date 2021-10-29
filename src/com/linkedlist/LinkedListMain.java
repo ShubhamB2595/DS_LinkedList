@@ -16,29 +16,18 @@ public class LinkedListMain {
 		mylist.add(70);
 		mylist.print();
 		System.out.println("");
-	/*	
-		//inserting 30 at position 1 as 70, 56
-		System.out.println("\nAfter adding the 30");
-		mylist.insert(1, 30);
+	
+		//inserting 40 and delete it and printing the size of Linked list
+		int pos30 = mylist.searchPosition(30);
+		mylist.insert(pos30+1, 40);
 		mylist.print();
-		
-		//after deleting 1st element
-		System.out.println("\nAfter deleting 1st element");
-		mylist.deleteFirst();
+		System.out.println("");
+		System.out.println("Before deleting, Size of my Linked list is: " + mylist.size());
+		int getIndex = mylist.searchPosition(40);
+		mylist.deletePosition(getIndex);
 		mylist.print();
-		
-		//after deleting last element
-		System.out.println("\nAfter deleting last element");
-		mylist.deleteLast();
-		mylist.print();	*/
-		
-		//Searching the data and it position
-		mylist.search(30);
-		
-		//adding 40 after 30
-		int getIndex = mylist.search(30);
-		mylist.insert(getIndex+1, 40);
-		mylist.print();
+		System.out.println("");
+		System.out.println("After deleting, Size of my Linked list is: " + mylist.size());
 	}
 
 }

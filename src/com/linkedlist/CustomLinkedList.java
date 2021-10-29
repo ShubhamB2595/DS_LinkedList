@@ -108,19 +108,38 @@ public class CustomLinkedList {
 		}
 		else {
 			Node temp = head;
-			Node last = temp.next;
+			Node temp1 = temp.next;
 			
-			while(last.next != null) {
-				temp = last;
-				last = last.next;
+			while(temp1.next != null) {
+				temp = temp1;
+				temp1 = temp1.next;
 			}
 			temp.next = null;
 		}
 	}
 	
+	//method for deleting element as specific position
+	public void deletePosition(int pos) {
+				
+		if(isEmpty()) {
+			System.out.println("Linked list is Empty");
+			return;
+		}
+		else {
+			Node temp = head;
+			Node temp1 = temp.next;
+				
+			for(int i=0; i<pos-1; i++) {
+				temp = temp1;
+				temp1 = temp1.next;
+			}
+			temp.next = temp1.next;
+		}
+	}
+	
 	
 	//method for searching the data and its position
-	public int search(int data) {
+	public int searchPosition(int data) {
 		
 		if(isEmpty()) {
 			System.out.println("Linked list is Empty");
@@ -140,6 +159,24 @@ public class CustomLinkedList {
 			}
 		}
 		return -1;
+	}
+	
+	// method for getting the size of linked list
+	public int size() {
+		
+		if(isEmpty()) {
+			System.out.println("Linked list is Empty");
+			return 0;
+		}
+		else {
+			Node temp = head;
+			int count = 0;
+			while(temp != null) {
+				count++;
+				temp = temp.next;
+			}
+			return count;
+		}
 	}
 	
 	@Override
