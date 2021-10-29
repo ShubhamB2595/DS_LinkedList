@@ -118,6 +118,29 @@ public class CustomLinkedList {
 		}
 	}
 	
+	
+	//method for searching the data adn its position
+	public void search(int data) {
+		
+		if(isEmpty()) {
+			System.out.println("Linked list is Empty");
+		}
+		else {
+			Node temp = head;
+			int index = 0;
+			while(temp != null) {
+				if(data == temp.data) {
+				System.out.println("Position for data: " + data + " at index: " + index);
+				return;
+				}
+				else {
+					index++;
+					temp = temp.next;
+				}
+			}
+		}
+	}
+	
 	@Override
 	public String toString() {
 		return "CustomLinkedList [head=" + head + "]";

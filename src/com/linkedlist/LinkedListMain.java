@@ -19,7 +19,7 @@ public class LinkedListMain {
 		System.out.println("\nAfter adding the 30");
 		mylist.insert(1, 30);
 		mylist.print();
-		
+	/*	
 		//after deleting 1st element
 		System.out.println("\nAfter deleting 1st element");
 		mylist.deleteFirst();
@@ -28,7 +28,10 @@ public class LinkedListMain {
 		//after deleting last element
 		System.out.println("\nAfter deleting last element");
 		mylist.deleteLast();
-		mylist.print();
+		mylist.print();	*/
+		
+		//Searching the data and it position
+		mylist.search(30);
 	}
 
 }
