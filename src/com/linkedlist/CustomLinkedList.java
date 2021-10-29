@@ -119,8 +119,8 @@ public class CustomLinkedList {
 	}
 	
 	
-	//method for searching the data adn its position
-	public void search(int data) {
+	//method for searching the data and its position
+	public int search(int data) {
 		
 		if(isEmpty()) {
 			System.out.println("Linked list is Empty");
@@ -131,7 +131,7 @@ public class CustomLinkedList {
 			while(temp != null) {
 				if(data == temp.data) {
 				System.out.println("Position for data: " + data + " at index: " + index);
-				return;
+				return index;
 				}
 				else {
 					index++;
@@ -139,6 +139,7 @@ public class CustomLinkedList {
 				}
 			}
 		}
+		return -1;
 	}
 	
 	@Override
