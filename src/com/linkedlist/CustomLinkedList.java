@@ -30,6 +30,7 @@ public class CustomLinkedList {
 		}
 		else {
 			Node temp = head;
+			
 			while(temp.next != null) {
 				temp = temp.next;
 			}
@@ -46,6 +47,7 @@ public class CustomLinkedList {
 		}
 		else {
 			Node temp = head;
+			
 			while(temp != null) {
 				System.out.print(temp.data + " ");
 				temp = temp.next;
@@ -83,6 +85,7 @@ public class CustomLinkedList {
 		}
 	}
 	
+	//method for deleting 1st element
 	public void deleteFirst() {
 		
 		if(isEmpty()) {
@@ -93,6 +96,25 @@ public class CustomLinkedList {
 			Node temp = head;
 			temp = temp.next;
 			head = temp;
+		}
+	}
+	
+	//method for deleting last element
+	public void deleteLast() {
+			
+		if(isEmpty()) {
+			System.out.println("Linked list is Empty");
+			return;
+		}
+		else {
+			Node temp = head;
+			Node last = temp.next;
+			
+			while(last.next != null) {
+				temp = last;
+				last = last.next;
+			}
+			temp.next = null;
 		}
 	}
 	
