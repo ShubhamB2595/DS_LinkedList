@@ -1,7 +1,5 @@
 package com.linkedlist;
 
-import java.util.LinkedList;
-
 /*
  * Data Structure Linked List
  */
@@ -11,12 +9,11 @@ public class LinkedListMain {
 	
 		System.out.println("Welcome to custom LinkedList program");
 		
-		LinkedList<Integer> mylist = new LinkedList<Integer>();
-		mylist.add(0, 56);
-		mylist.add(1, 30);
-		mylist.add(2, 70);
-	
-		System.out.println(mylist);
+		CustomLinkedList mylist = new CustomLinkedList();
+		mylist.add(70);
+		mylist.add(30);
+		mylist.add(56);
+		mylist.print(mylist.head);
 	
 	}
 
