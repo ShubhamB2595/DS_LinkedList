@@ -179,6 +179,31 @@ public class CustomLinkedList {
 		}
 	}
 	
+	//Method for sorting the list in ascending order
+	public void sortAsc() {
+		
+		Node temp = head, index = null;
+		int sort;
+		
+		if(isEmpty()) {
+			System.out.println("Linked list is Empty");
+		}
+		else {
+			while(temp != null) {
+				index = temp.next;
+				while(index != null) {
+					if(temp.data > index.data) {
+						sort = temp.data;
+						temp.data = index.data;
+						index.data = sort;
+					}
+					index = index.next;
+				}
+				temp = temp.next;
+			}
+		}
+	}
+	
 	@Override
 	public String toString() {
 		return "CustomLinkedList [head=" + head + "]";
